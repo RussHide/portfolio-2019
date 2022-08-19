@@ -1,0 +1,859 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="img/favicon.svg"  sizes="16x16">
+  <title>Main | Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+      overflow-y: scroll;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .example::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .example {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+  </style>
+</head>
+
+<body class="example">
+  <main class="font-sans bg-white" id="mainContent">
+    <!-- Header -->
+    <header id="header" class="bg-white shadow border-t-4 border-blue-500">
+      <!-- <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <a class="flex items-center text-gray-800 hover:text-indigo-600" href="#">
+              <i class="fas fa-terminal"></i>
+              <span class="mx-1 font-medium text-sm md:text-base">Cristian Dominguez</span>
+            </a>
+          </div>
+          <div class="flex items-center -mx-2">
+            <a class="flex items-center mx-2 text-gray-800 hover:text-indigo-600" href="#about">
+              About
+            </a>
+            <a class="flex items-center mx-2 text-gray-800 hover:text-indigo-600" href="#education">
+              Education
+            </a>
+            <a class="flex items-center mx-2 text-gray-800 hover:text-indigo-600" href="#skills">
+              Skills
+            </a>
+            <a class="flex items-center mx-2 text-gray-800 hover:text-indigo-600" href="#projects">
+              Projects
+            </a>
+            <a class="flex items-center mx-2 text-gray-800 hover:text-indigo-600" href="#contact">
+              Contact Me
+            </a>
+          </div>
+        </div>
+      </div> -->
+      <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+        <div x-data="{ open: false }"
+          class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+          <div class="p-4 flex flex-row items-center justify-between">
+            <a class="flex items-center text-gray-800 hover:text-indigo-600" href="#">
+              <i class="fas fa-terminal"></i>
+              <span class="mx-1 font-medium text-sm md:text-base">Cristian Dominguez</span>
+            </a>
+            <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline " @click="open = !open">
+              <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                <path x-show="!open" fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                  clip-rule="evenodd"></path>
+                <path x-show="open" fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+          <nav :class="{'flex': open, 'hidden': !open}"
+            class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+            <a class="flex items-center mx-2 font-semibold  text-gray-700 hover:text-indigo-600" href="#about">
+              About
+            </a>
+            <a class="flex items-center mx-2 font-semibold  text-gray-700 hover:text-indigo-600" href="#education2">
+              Education
+            </a>
+            <a class="flex items-center mx-2 font-semibold  text-gray-700 hover:text-indigo-600" href="#skills">
+              Skills
+            </a>
+            <a class="flex items-center mx-2 font-semibold  text-gray-700 hover:text-indigo-600" href="#projects">
+              Projects
+            </a>
+            <a class="flex items-center mx-2 font-semibold  text-gray-700 hover:text-indigo-600" href="#contact">
+              Contact Me
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Main info-->
+    <section class="">
+      <div class="container mx-auto mt-8 md:mt-0 md:space-x-10 md:grid grid-cols-3 justify-center md:py-40">
+        <div class="grid justify-center items-center order-1 col-span-1">
+          <img class="lg:h-80 md:h-64 h-40 rounded-full" src="img/1.jpg" />
+        </div>
+        <div class="mt-8 md:mt-0 lg:justify-end col-span-2">
+          <h1 class="mt-10 text-4xl text-gray-800 text-center md:text-left font-bold mb-6" id="wemeText">
+          </h1>
+          <p class="text-xl text-gray-800 text-center md:text-left">
+            I am a web developer, learning something new every day to gain more experience, working in web technologies
+            and Ui / Ux design, delivering quality work.
+          </p>
+          <button
+            class="hover:bg-blue-500 block mt-8 mx-auto md:mx-0 text-2xl py-3 px-6 text-red-50 font-semibold rounded bg-blue-400">Download
+            Resume</button>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section id="about" class="bg-gray-800 pattern my-6 py-16 opacity-0 invisible seRevela">
+      <div class="max-w-5xl px-6 mx-auto text-center">
+        <h2 class="text-3xl font-semibold text-white opacity-0 invisible seRevela">About Me</h2>
+        <p class="text-gray-300 mt-4 opacity-0 invisible seRevela">
+         My name is Cristian Dominguez, I am a fullstack web developer, passionate about different
+          technologies.
+          I like to experiment or play with different technologies as well as learn new things about them, the current
+          experience I have is with projects that I have done on my own.
+          With the technology that I feel comfortable working with, it is with the TALL technology stack.
+          I am currently studying a degree in computer systems at UAdeC.
+        </p>
+      </div>
+    </section>
+    <!-- Education LG-->
+    <section id="education1" class="hidden lg:block text-gray-600 body-font mt-16">
+      <div class="flex flex-col  items-center  opacity-0 invisible seRevela ">
+        <h2 class="text-3xl font-semibold mb-2 text-center text-gray-800 ">Education</h2>
+        <div class="h-1 w-40 bg-blue-400 rounded  mb-12"></div>
+      </div>
+      <div class="xl:container px-5 mx-auto flex ">
+        <div class="flex w-full">
+          <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6 opacity-0 invisible seRevela saleDerecha">
+            <div class="flex relative pb-12">
+              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Escuela de Sistemas UAdeC
+                </h2>
+                <p class="leading-relaxed">Currently in the fifth semester of a bachelor's degree in administrative
+                  computer systems.</p>
+              </div>
+            </div>
+            <div class="flex relative pb-12">
+              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">NodeJs Practice</h2>
+                <p class="leading-relaxed">I had a NodeJS practice where I learned the use of how to manage methods,
+                  send requests to the server and programs like Postman and MongoDB.</p>
+              </div>
+            </div>
+            <div class="flex relative pb-12">
+              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Udemy Laravel Course</h2>
+                <p class="leading-relaxed">I learned how to make a course platform with the correct use of TALL and MVC,
+                  in addition to reinforcing database knowledge by making a totally related one</p>
+              </div>
+            </div>
+            <div class="flex relative pb-12">
+              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Udemy Tailwind Course</h2>
+                <p class="leading-relaxed">I learned the use of the framework for a faster frontend development</p>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Plazti Git/GitHub Course
+                </h2>
+                <p class="leading-relaxed">I learned the correct use of both tools, I also learned the differences
+                  between both and the newer uses</p>
+              </div>
+            </div>
+          </div>
+          <img
+            class=" lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12 opacity-0 invisible seRevela saleIzquierda"
+            src="img/study.gif">
+        </div>
+      </div>
+    </section>
+    <!-- Education SM -->
+    <section id="education2" class=" md:block lg:hidden text-gray-600 body-font">
+      <div class="flex flex-col  items-center  opacity-0 invisible seRevela ">
+        <h2 class="text-3xl font-semibold mb-2 text-center text-gray-800 ">Education</h2>
+        <div class="h-1 w-40 bg-blue-400 rounded mb-1 md:mb-12"></div>
+      </div>
+      <div class="container px-5 py-12 mx-auto flex flex-wrap">
+        <div
+          class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto opacity-0 invisible seRevela saleIzquierda">
+          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+            1</div>
+          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Escuela de Sistemas UAdeC</h2>
+              <p class="leading-relaxed">
+                Currently in the fifth semester of a bachelor's degree in administrative computer systems.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto opacity-0 invisible seRevela saleIzquierda">
+          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+            2</div>
+          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">NodeJs Practice</h2>
+              <p class="leading-relaxed">
+                I had a NodeJS practice where I learned the use of how to manage methods, send requests to the server
+                and programs like Postman and MongoDB.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto opacity-0 invisible seRevela saleIzquierda">
+          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+            3</div>
+          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Udemy Laravel Course</h2>
+              <p class="leading-relaxed">
+                I learned how to make a course platform with the correct use of TALL and MVC, in addition to reinforcing
+                database knowledge by making a totally related one
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto opacity-0 invisible seRevela saleIzquierda">
+          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+            4</div>
+          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Udemy Tailwind Course</h2>
+              <p class="leading-relaxed">
+                I learned the use of the framework for a faster frontend development.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto opacity-0 invisible seRevela saleIzquierda">
+          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div
+            class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
+            5</div>
+          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Plazti Git/GitHub Course</h2>
+              <p class="leading-relaxed">
+                I learned the correct use of both tools, I also learned the differences between both and the newer uses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="bg-white py-16 seRevela ">
+      <div class=" max-w-xl md:max-w-3xl px-6 mx-auto text-center">
+        <div class="flex flex-col  items-center">
+          <h2 class="text-3xl font-semibold mb-2 text-gray-800 ">Skills</h2>
+          <div class="h-1 w-28 bg-blue-400 rounded mb-12 lg:mb-16"></div>
+        </div>
+        <div class="col mt-6 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-y-6 gap-x-6">
+          <!-- Java -->
+          <div class="p-3 flex flex-col justify-end rounded-md shadow-xl
+          transition duration-300 ease-in-out  transform  hover:scale-110">
+            <img src="img/java.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2  text-xs flex rounded bg-gray-200">
+                <div style="width:70%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">70%</span>
+          </div>
+          <!-- Python -->
+          <div class="p-3 flex flex-col justify-end rounded-md shadow-xl 
+          transition duration-300 ease-in-out  transform hover:scale-110">
+            <img src="img/python.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                <div style="width:20%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">20%</span>
+          </div>
+          <!-- Php -->
+          <div class="p-3 flex flex-col justify-end  rounded-md shadow-xl 
+          transition duration-300 ease-in-out  transform  hover:scale-110">
+            <img src="img/php.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                <div style="width:50%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">50%</span>
+          </div>
+          <!-- Html -->
+          <div class="p-3 flex flex-col justify-end rounded-md shadow-xl 
+          transition duration-300 ease-in-out  transform  hover:scale-110">
+            <img src="img/html.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2  text-xs flex rounded bg-gray-200">
+                <div style="width:80%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">80%</span>
+          </div>
+          <!-- Css -->
+          <div class="p-3 flex flex-col justify-end rounded-md shadow-xl 
+          transition duration-300 ease-in-out  transform  hover:scale-110">
+            <img src="img/css.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                <div style="width:80%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">80%</span>
+          </div>
+          <!-- Javascript -->
+          <div class="p-3 flex flex-col justify-end rounded-md shadow-xl 
+            transition duration-300 ease-in-out  transform  hover:scale-110">
+            <img src="img/js.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                <div style="width:30%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">30%</span>
+          </div>
+          <!-- Laravel -->
+          <div class="p-3 flex flex-col justify-end  rounded-md shadow-xl 
+          transition duration-300 ease-in-out  transform  hover:scale-110">
+            <img src="img/laravel.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                <div style="width:50%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">50%</span>
+          </div>
+          <!-- Tailwind -->
+          <div class="flex flex-col justify-end p-3  rounded-md shadow-xl 
+          transition duration-300 ease-in-out  transform  hover:scale-110">
+
+            <img src="img/tailwind.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                <div style="width:90%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">90%</span>
+          </div>
+          <!-- GitHub -->
+          <div class="p-3 flex flex-col justify-end rounded-md shadow-xl 
+          transition duration-300 ease-in-out  transform  hover:scale-110">
+            <img src="img/github.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                <div style="width:70%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">70%</span>
+          </div>
+          <!-- Mysql -->
+          <div class="p-3 flex flex-col justify-end rounded-md shadow-xl 
+          transition duration-300 ease-in-out  transform  hover:scale-110">
+            <img src="img/mysql1.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                <div style="width:80%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">80%</span>
+          </div>
+          <!-- Fx -->
+          <div class="p-3 flex flex-col justify-end  rounded-md shadow-xl 
+            transition duration-300 ease-in-out transform hover:scale-110">
+            <img src="img/fx.png" alt="">
+            <div class="relative pt-1">
+              <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                <div style="width:70%"
+                  class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
+                </div>
+              </div>
+            </div>
+            <span class="text-gray-500">70%</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="relative mt-20 mb-10 md:mb-20 opacity-0 invisible seRevela saleIzquierda">
+      <div>
+        <div class="flex flex-col items-center lg:mb-6">
+          <h2 class="text-3xl font-semibold mb-2  text-gray-800">Projects</h2>
+          <div class="h-1 w-80 bg-blue-400 rounded "></div>
+        </div>
+        <div class="container mx-auto px-4 mt-20 ">
+          <div class="items-center flex flex-col lg:flex-row  ">
+
+            <div class="w-full lg:w-4/12 px-4 mr-auto ml-auto order-last lg:order-first ">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg 
+            transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                <img src="img/missing1.png" class="w-full align-middle rounded-t-lg" />
+                <img src="img/missing1.1.png" class="w-full align-middle " />
+                <img src="img/missing2.png" class="w-full align-middle " />
+              </div>
+            </div>
+            <div class="w-full lg:w-5/12 ml-auto mr-auto px-4 ">
+              <div class="md:pr-12">
+
+                <h3 class="text-3xl font-semibold">Missing People Page</h3>
+                <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                  This page was one of my personal ideas. It was made with reasons to support a little people with
+                  missing relatives, and to put into practice my knowledge with TALL.
+                </p>
+                <ul class="list-none mt-6">
+                  <h4 class="text-gray-700 font-semibold">Used technologies</h4>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                          <i class="fas fa-check-circle"></i></span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">
+                          Tailwind
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                          <i class="fas fa-check-circle"></i></span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">Alphine</h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                          <i class="fas fa-check-circle"></i></span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">Laravel</h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                          <i class="fas fa-check-circle"></i></span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">Livewire</h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class=" mb-6 lg:mb-0">
+                  <a  target="_blank"
+                    class="cursor-pointer text-gray-600 hover:text-blue-400  font-semibold line-through">Live Demo <i
+                      class=" fas fa-arrow-right "></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative py-10 md:py-20 opacity-0 invisible seRevela saleDerecha">
+      <div class="container mx-auto px-4">
+        <div class="items-center flex flex-col lg:flex-row ">
+          <div class="w-full lg:w-5/12 ml-auto mr-auto px-4">
+            <div class="md:pr-12 md:order-first">
+
+              <h3 class="text-3xl font-semibold">Courses Platform</h3>
+              <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                This page was the one I did in the Laravel and Talwind courses on Udemy, where I learned the correct way
+                to use the different technologies and have a clean code.
+              </p>
+              <ul class="list-none mt-6">
+                <h4 class="text-gray-700 font-semibold">Used technologies</h4>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                        <i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">
+                        Tailwind
+                      </h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                        <i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Alphine</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                        <i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Laravel</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                        <i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Livewire</h4>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class=" mb-6 lg:mb-0">
+                <a  target="_blank"
+                  class="cursor-pointer line-through text-gray-600 hover:text-blue-400  font-semibold">View Repo <i
+                    class=" fas fa-arrow-right "></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-4/12 px-4 mr-auto ml-auto order-last ">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg 
+            transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              <img src="img/cou1.png" class="w-full align-middle rounded-t-lg" />
+              <img src="img/cou2.png" class="w-full align-middle rounded-t-lg" />
+              <img src="img/cou3.png" class="w-full align-middle rounded-t-lg" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="relative py-10 md:py-20 opacity-0 invisible seRevela saleIzquierda">
+      <div class="container mx-auto px-4">
+        <div class="items-center flex flex-col lg:flex-row ">
+          <div class="w-full lg:w-4/12 px-4 mr-auto ml-auto order-last lg:order-first">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg 
+            transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              <img src="img/gym1.png" class="w-full align-middle rounded-t-lg" />
+              <img src="img/gym2.png" class="w-full align-middle " />
+              <img src="img/gym3.png" class="w-full align-middle " />
+            </div>
+          </div>
+          <div class="w-full lg:w-5/12 ml-auto mr-auto px-4">
+            <div class="md:pr-12">
+
+              <h3 class="text-3xl font-semibold">GYM Page</h3>
+              <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                This page was one of the first I did when I was entering the world of web development.
+              </p>
+              <ul class="list-none mt-6">
+                <h4 class="text-gray-700 font-semibold">Used technologies</h4>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                        <i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">
+                        Html
+                      </h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                        <i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Vanilla Css</h4>
+                    </div>
+                  </div>
+                </li>
+                <li class="py-2">
+                  <div class="flex items-center">
+                    <div>
+                      <span
+                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200 mr-3">
+                        <i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <div>
+                      <h4 class="text-gray-600">Vanilla JavaScript</h4>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class=" mb-6 lg:mb-0">
+                <a  target="_blank"
+                  class="cursor-pointer line-through text-gray-600 hover:text-blue-400  font-semibold">View Repo <i
+                    class=" fas fa-arrow-right "></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact me -->
+    <section id="contact" class="bg-white py-16 seRevela ">
+      <div class=" max-w-xl md:max-w-7xl px-6 mx-auto text-center">
+        <div class="text-center mb-20">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Contact Me</h1>
+          <p class="text-xl leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+            Need a hand? Or a high five? Here´s how to reach me.
+          </p>
+          <div class="flex mt-6 justify-center">
+            <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+          </div>
+        </div>
+        <div class="col mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-6 gap-x-6">
+          <!-- Whatsapp -->
+          <a href="http://wa.me/"
+            class=" transition duration-300 ease-in-out  transform  hover:scale-110 p-4 
+            flex flex-col justify-center text-center items-center hover:bg-gray-100 shadow-xl rounded-lg 
+            ">
+              <div class="w-20 h-20 inline-flex items-center 
+            justify-center rounded-full shadow-md text-indigo-500 mb-5 flex-shrink-0">
+                <i class="fab fa-whatsapp text-5xl text-green-400"></i>
+              </div>
+              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Whatsapp</h2>
+
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=100028087326613"
+            class=" transition duration-300 ease-in-out  transform  hover:scale-110 p-4 
+            flex flex-col justify-center text-center items-center hover:bg-gray-100 shadow-xl rounded-lg 
+            ">
+              <div class="w-20 h-20 inline-flex items-center 
+            justify-center rounded-full shadow-md text-indigo-500 mb-5 flex-shrink-0">
+                <i class="fab fa-facebook text-5xl text-blue-400"></i>
+              </div>
+              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Facebook</h2>
+
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/fabiangn0/"
+            class=" transition duration-300 ease-in-out  transform  hover:scale-110 p-4 
+            flex flex-col justify-center text-center items-center hover:bg-gray-100 shadow-xl rounded-lg 
+            ">
+              <div class="w-20 h-20 inline-flex items-center 
+            justify-center rounded-full shadow-md text-indigo-500 mb-5 flex-shrink-0">
+                <i class="fab fa-instagram text-5xl text-pink-400"></i>
+              </div>
+              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Instagram</h2>
+
+          </a>
+          <!-- Email -->
+          <a href="mailto: keyloggerxd25@gmail.com"
+            class=" transition duration-300 ease-in-out  transform  hover:scale-110 p-4 
+            flex flex-col justify-center text-center items-center hover:bg-gray-100 shadow-xl rounded-lg 
+            ">
+              <div class="w-20 h-20 inline-flex items-center 
+            justify-center rounded-full shadow-md text-indigo-500 mb-5 flex-shrink-0">
+                <i class="far fa-envelope text-5xl text-gray-400"></i>
+              </div>
+              <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Facebook</h2>
+
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="contact" class="relative opacity-0 invisible seRevela contact ">
+      <div class="bg-white max-w-screen-xl lg:max-w-screen-xl my-12 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 
+      py-16 mx-auto text-gray-900 rounded-lg shadow-lg md:max-w-4xl">
+        <div class="flex flex-col justify-between">
+          <div>
+            <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Lets talk about everything!</h2>
+            <div class="text-gray-700 mt-8">
+              Hate forms? Send me an <a href="#" class="underline">email</a> instead.
+            </div>
+          </div>
+          <div class="mt-8 text-center">
+            <img class="w-full" src="img/contact.svg" alt="">
+          </div>
+        </div>
+        <div class="">
+          <div class="">
+            <span class=" text-sm text-gray-600 font-bold">Full Name</span>
+            <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              type="text" placeholder="">
+          </div>
+          <div class="mt-8">
+            <span class=" text-sm text-gray-600 font-bold">Email</span>
+            <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              type="text">
+          </div>
+          <div class="mt-8">
+            <span class=" text-sm text-gray-600 font-bold">Message</span>
+            <textarea
+              class="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline resize-none"></textarea>
+          </div>
+          <div class="mt-8">
+            <button
+              class=" text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+              Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Footer -->
+    <footer class="bg-white">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div>
+            <div class="text-gray-600">&copy; Cristian Dominguez</div>
+          </div>
+          <div class="flex items-center -mx-2">
+            <a href="http://wa.me/528721398407" target="_blank"
+              class="flex items-center mx-2 text-gray-600 hover:text-green-600" href="#">
+              <i class="fab fa-whatsapp text-xl"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100028087326613" target="_blank"
+              class="flex items-center mx-2 text-gray-600 hover:text-indigo-600" href="#">
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/fabiangn0/" target="_blank"
+              class="flex items-center mx-2 text-gray-600 hover:text-pink-600" href="#">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="https://github.com/RussHide" target="_blank"
+              class="flex items-center mx-2 text-gray-600 hover:text-black">
+              <i class="cursor-pointer fab fa-github text-xl "></i>
+            </a>
+            <!-- <a href="#header">
+              <i
+                class="cursor-pointer fas fa-arrow-up flex items-center mx-2 hover:text-indigo-600 text-gray-600 text-xl animate-bounce"></i>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Up Arrow -->
+    <a href="#header" id="arrow">
+      <i class="arrow text-white  fixed cursor-pointer fas fa-arrow-up right-4 bottom-4 
+        mx-2 hover:text-blue-300  text-lg animate-bounce bg-gray-800 p-2 rounded-full"></i>
+    </a>
+  </main>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
